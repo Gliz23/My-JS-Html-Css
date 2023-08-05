@@ -1,0 +1,103 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 ;
+    margin: 0 ;
+    box-sizing:border-box;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(abg.jpg);
+    background-position: center ;
+    background-size: cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+}
+
+form{
+    width: 90% ;
+    max-width: 600px;
+    background: rgba(20, 20, 20, 0.253);
+}
+.input-group{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+input{
+    width: 70%;
+    padding: 1px;
+    outline:0;
+    border: 1px solid rgb(201, 200, 200);
+    color:rgb(238, 233, 233);
+    background: transparent;
+    font-size:20px;
+}
+
+label{
+    height: 100%;
+    position: absolute;
+    left: 0;  
+    top: 0;
+    padding: 10px; 
+    color:rgb(231, 229, 229);
+    cursor:  text;
+    transition: 1s;
+}
+button{
+    padding:10px;
+    color:rgb(54, 13, 13);
+    outline: none;
+    background: rgb(238, 127, 108);
+    border: 5px solid rgb(226, 111, 29);
+}
+
+
+input:focus~label,
+input:valid~label{
+    top: -35px;
+    font-size: 14px;
+}
+
+.row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.row .input-group{
+    flex-basis: 60%;
+}
+
+.header{
+    align-items:center; 
+    flex-basis: 40%;
+}
+
+ 
+
+.header{
+    color:rgb(5, 19, 146);
+    size: 4000px;
+    font-size: 50px;
+    font-style: oblique;
+    background: transparent;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-shadow: 2px;
+    background-color: rgb(183, 255, 231);
+    text-underline-offset: 3px;
+    text-decoration:dotted;
+    outline-color: black; 
+}
+
+.img-logo{
+    width: 400px;
+    padding-right: 200px;
+}
+
+ 
