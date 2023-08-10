@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cart Quantity</title>
+    </head>
+    <body>
+        <button onclick="
+            console.log(`Cart Quantity: ${cartQuantity}`);
+       ">Show Quantity</button>
+
+        <button onclick="
+            cartQuantity += 1;
+            console.log(`Cart Quantity: ${cartQuantity}`);
+       ">Add to Cart</button>
+
+        <button onclick = "
+            cartQuantity += 2
+            console.log(`Cart Quantity : ${cartQuantity}`)    
+        ">Plus two</button>
+
+        <button onclick = "
+            cartQuantity += 3
+            console.log(`Cart Quantity : ${cartQuantity}`)
+        ">Plus three</button>
+
+        <button onclick = "
+            cartQuantity += 4
+            console.log(`Cart Quantity : ${cartQuantity}`)
+        ">Plus four</button>
+
+        <button onclick = "
+            cartQuantity += 5
+            console.log(`Cart Quantity : ${cartQuantity}`)
+        ">Plus five</button>
+
+        <button onclick = "
+            cartQuantity -= 2
+            console.log(`Cart Quantity : ${cartQuantity}`)
+        ">Minus two</button>
+
+        <button onclick = "
+            cartQuantity -= 3
+            console.log(`Cart Quantity : ${cartQuantity}`)
+        ">Minus three</button>
+
+        <button onclick = "
+            cartQuantity --
+            console.log(`Cart Quantity : ${cartQuantity}`)
+        ">Remove from Cart</button>
+
+        <button onclick = " 
+            cartQuantity = 0
+            console.log(`Cart Quantity : ${cartQuantity}`)
+        ">Reset Cart</button>
+
+        <script>
+            let cartQuantity = 0;
+            // consts are used to instantiate variables and cannot be changed.
+            const permanent = 100;
+            // Var is used create a variable that can be changed.
+            var number = 49;
+
+            console.log(typeof 3);
+            console.log(typeof cartQuantity);
+        </script>
+        
+    </body>
+</html>
+
