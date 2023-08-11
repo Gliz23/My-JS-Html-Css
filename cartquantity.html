@@ -9,27 +9,47 @@
        ">Show Quantity</button>
 
         <button onclick="
-            cartQuantity += 1;
+            if (cartQuantity<=9){
+                cartQuantity += 1;
+            }else{
+                alert('The cart is full');
+            }
             console.log(`Cart Quantity: ${cartQuantity}`);
        ">Add to Cart</button>
 
         <button onclick = "
-            cartQuantity += 2
+            if (cartQuantity<=8){
+                cartQuantity += 2
+            }else{
+                alert('The cart is full');
+            }
             console.log(`Cart Quantity : ${cartQuantity}`)    
         ">Plus two</button>
 
         <button onclick = "
-            cartQuantity += 3
+            if (cartQuantity<=7){
+                cartQuantity += 3
+            }else{
+                alert('The cart is full');
+            }
             console.log(`Cart Quantity : ${cartQuantity}`)
         ">Plus three</button>
 
         <button onclick = "
-            cartQuantity += 4
+            if (cartQuantity<=6){
+                cartQuantity += 4
+            }else{
+                alert('The cart is full');
+            }
             console.log(`Cart Quantity : ${cartQuantity}`)
         ">Plus four</button>
 
         <button onclick = "
-            cartQuantity += 5
+            if (cartQuantity<=5){
+                cartQuantity += 5
+            }else{
+                alert('The cart is full');
+            }
             console.log(`Cart Quantity : ${cartQuantity}`)
         ">Plus five</button>
 
@@ -55,13 +75,6 @@
 
         <script>
             let cartQuantity = 0;
-            // consts are used to instantiate variables and cannot be changed.
-            const permanent = 100;
-            // Var is used create a variable that can be changed.
-            var number = 49;
-
-            console.log(typeof 3);
-            console.log(typeof cartQuantity);
         </script>
         
     </body>
