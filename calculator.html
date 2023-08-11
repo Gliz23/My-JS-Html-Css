@@ -4,6 +4,7 @@
         <title>Calculator</title>
 
     </head>
+    <h1> Calculator </h1>
     <p>
         <button onclick="
             calculation += '1';
@@ -46,15 +47,15 @@
         <button onclick="
             calculation += '7';
             console.log(calculation)    
-        ">4</button>
+        ">7</button>
         <button onclick="
             calculation += '8';
             console.log(calculation)
-        ">5</button>
+        ">8</button>
         <button onclick="
             calculation += '9';
             console.log(calculation)  
-        ">6</button>
+        ">9</button>
         <button onclick="
             calculation += ' * ';
             console.log(calculation)  
@@ -78,9 +79,15 @@
         <button onclick="
             calculation += ' / ';
             console.log(calculation)  
-        ">/</button>
-        
+        ">/</button>      
     </p>
+
+    <p>
+        <button onclick="
+            console.log('Cleared')  
+        ">Clear</button>
+    </p>
+    
     
     <script>
         let calculation = ''; 
