@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+    </head>
+    <body>
+        
+        <p>Rock Paper Scissors</p>
+        <button onclick="
+            playGame('Rock');            
+        ">Rock</button>
+
+        <button onclick="
+            playGame('Paper');
+        ">Paper</button>
+
+        <button  onclick="
+            playGame('Scissors');
+        ">Scissors</button>
+
+        <button onclick="
+            score.wins = 0
+            score.loses = 0
+            score.draws = 0
+            localStorage.removeItem('score')
+            alert(`wins: ${score.wins}, loses: ${score.loses}, ties: ${score.draws}`);
+        ">Reset</button>
+<!-- 
+ Var has been replaced with const and let
+ because it doesn't follow the rules of scopes. -->
+
+        
+        <script>
+            const score = JSON.parse(localStorage.getItem('score')) || {
+                wins : 0,
+                losses : 0,
+                draws : 0
+            };
+            
+            function playGame(myChoice){
+                
+                let computerChoice = '';
+                const randomNum = Math.random(); 
+                    if (randomNum >= 0 && randomNum < 1/3) {
+                            computerChoice = 'Rock'
+                    } else if (randomNum >= 1/3 && randomNum < 2/3) {
+                            computerChoice = 'Paper'
+                    } else if (randomNum >= 2/3 && randomNum < 1) {
+                            computerChoice = 'Scissors'
+                    }
+
+                let result =''; 
+
+                if (myChoice === 'Rock') {
+                    if (computerChoice === 'Rock'){
+                        result = 'A tie';
+                    } else if (computerChoice === 'Paper'){
+                        result = 'You lose';
+                    } else if (computerChoice === 'Scissors'){
+                        result = 'You win';
+                    }
+                } else if (myChoice === 'Paper') {
+                    if (computerChoice === 'Rock'){
+                        result = 'You win';
+                    } else if (computerChoice === 'Paper'){
+                        result = 'A tie';
+                    } else if (computerChoice === 'Scissors'){
+                        result = 'You lose';
+                    }
+                } else if (myChoice === 'Scissors') {
+                    if (computerChoice === 'Rock'){
+                        result = 'You lose';
+                    } else if (computerChoice === 'Paper'){
+                        result = 'You win';
+                    } else if (computerChoice === 'Scissors'){
+                        result = 'A tie';
+                    }
+                } 
+
+                if (result === 'You win') {
+                    score.wins += 1;
+                }else if (result === 'You lose') {
+                    score.loses += 1;
+                } else if (result === 'A tie') {
+                    score.draws +=1;
+                }
+
+                alert(`You picked ${myChoice}. Computer picked ${computerChoice}. ${result}
+                wins: ${score.wins}, loses: ${score.loses}, ties: ${score.draws}`);
+                
+                localStorage.setItem('score', JSON.stringify(score))
+                
+                
+            }             
+        </script>
+    </body>
+</html>
+
