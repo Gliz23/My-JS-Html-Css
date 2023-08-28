@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CoinFlip</title>
+    </head>
+    <body>
+        <button onclick="
+            CoinFlip ()
+        ">Play</button>
+
+        <script>
+             
+            let result = ''
+            let guess = 'Heads'
+
+            function CoinFlip () {
+                let random = Math.random()
+                if (random < 0.5) {
+                    result = 'Heads'
+                    console.log('Heads')
+                }else{
+                    result = 'Tails'
+                    console.log('Tails')
+                }
+
+                if (guess == result) {
+                    console.log("You win (:")
+                }else{
+                    console.log("You lose ):")
+                }  
+            }
+            
+        </script>
+    </body>
+    
+</html>
